@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Login from './Components/Login'
+import Dashboard from './Components/Dashboard'
+import Form from './Components/Form'
+
+const Navbar = () => {
+  return (
+    <nav>
+      <div className="nav-wrapper blue darken-2">
+        <a href="#" className="brand-logo center">React Admin</a>
+      </div>
+    </nav>
+  )
+}
 
 class App extends Component {
+  constructor(){
+    super();
+
+  }
+
+  // loginHandler(){
+  //   this.setState({login: true})
+  // }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        {/* <Navbar /> */}
+        <Login />
       </div>
     );
   }
