@@ -3,24 +3,47 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class Login extends Component {
-  constructor(){
-    super();
-    this.state = {
-      login: false
-    }
-  }
+  // constructor(props){
+  //   super(props);
+  //   this.state = {
+  //     login: false
+  //   }
+  //   // console.log(this.state.user)
+  // }
 
-  loginHandler(e) {
-    e.preventDefault();
-    const [email, password] = ["admin@domain.com", "admin"];
-    const emailVal = this.emailVal.value;
-    const passVal = this.passVal.value;
-    emailVal === email && passVal === password ? this.setState({login: true}) : console.log("error")
-  }
+  // loginHandler(e) {
+  //   e.preventDefault();
+  //   const [
+  //     email,
+  //     password
+  //   ] = [ "admin@domain.com", "admin" ];
+
+  //   const [
+  //     emailVal,
+  //     passVal
+  //   ] = [ this.emailVal.value, this.passVal.value ];
+
+  //   const validation = emailVal === email && passVal === password;
+  //   const swalFunc = () => {
+  //     return swal({
+  //       text: "Wrong Credentials",
+  //       icon: "error",
+  //       buttons: false,
+  //       timer: 2500
+  //     });
+  //   }
+  //   const success = () => {
+  //     this.setState({login: true});
+  //     const hideLogin = this.mainDiv.classList.add('hide');
+  //     return hideLogin;
+  //   }
+  //   return validation ? success() : swalFunc();
+  // }
 
   render() {
+    // console.log(this.state.user)
     return (
-      <div className="loginMainDiv">
+      <div className="loginMainDiv" ref={this.props.mainDiv}>
         <div className="card z-depth-5">
           <div className="card-content blue darken-2 white-text">
             <p className="flow-text center-align">Log In</p>
@@ -28,18 +51,18 @@ class Login extends Component {
           <div className="card-content">
             <div id="login">
               <div className="row">
-                <form onSubmit={e => this.loginHandler(e)} className="col s12">
+                <form onSubmit={this.props.loginHandler} className="col s12">
                   <div className="row">
                     <div className="input-field col s12">
                       <i className="material-icons prefix">email</i>
-                      <input ref={el => this.emailVal = el} id="email" type="email" required />
+                      <input ref={this.props.emailVal} id="email" type="email" />
                       <label htmlFor="email">Email</label>
                     </div>
                   </div>
                   <div className="row">
                     <div className="input-field col s12">
                       <i className="material-icons prefix">lock</i>
-                      <input ref={el => this.passVal = el} id="password" type="password" required />
+                      <input ref={this.props.passVal} id="password" type="password" />
                       <label htmlFor="password">Password</label>
                     </div>
                   </div>
