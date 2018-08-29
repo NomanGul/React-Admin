@@ -3,45 +3,8 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class Login extends Component {
-  // constructor(props){
-  //   super(props);
-  //   this.state = {
-  //     login: false
-  //   }
-  //   // console.log(this.state.user)
-  // }
-
-  // loginHandler(e) {
-  //   e.preventDefault();
-  //   const [
-  //     email,
-  //     password
-  //   ] = [ "admin@domain.com", "admin" ];
-
-  //   const [
-  //     emailVal,
-  //     passVal
-  //   ] = [ this.emailVal.value, this.passVal.value ];
-
-  //   const validation = emailVal === email && passVal === password;
-  //   const swalFunc = () => {
-  //     return swal({
-  //       text: "Wrong Credentials",
-  //       icon: "error",
-  //       buttons: false,
-  //       timer: 2500
-  //     });
-  //   }
-  //   const success = () => {
-  //     this.setState({login: true});
-  //     const hideLogin = this.mainDiv.classList.add('hide');
-  //     return hideLogin;
-  //   }
-  //   return validation ? success() : swalFunc();
-  // }
 
   render() {
-    // console.log(this.state.user)
     return (
       <div className="loginMainDiv" ref={this.props.mainDiv}>
         <div className="card z-depth-5">
