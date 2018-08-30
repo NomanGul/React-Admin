@@ -170,8 +170,15 @@ class App extends Component {
   //   // });
   // }
 
+  placeHolder(){
+    return(
+      <div>
+        <h1 className="center">Plz add an Employee :(</h1>
+      </div>)
+  }
+
   render() {
-    const { login } = this.state;
+    const { login, employeesObj } = this.state;
     return (
       <div>
 
@@ -187,6 +194,7 @@ class App extends Component {
         {login && <Dashboard employeeCreator={this.employeeCreator()} />}
         {/* <Navbar logoutHandler={() => this.logoutHandler()} />
         <Dashboard employeeCreator={this.employeeCreator()} /> */}
+        {login && employeesObj.length === 0 ? this.placeHolder() : "" }
         <Form
           addFunc={() => this.addFunc()}
           cancelFunc={() => this.cancelFunc()}
