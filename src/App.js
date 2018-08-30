@@ -175,18 +175,18 @@ class App extends Component {
     return (
       <div>
 
-        {/* {!login && <Login
+        {!login && <Login
           loginHandler={ e => this.loginHandler(e) }
           loginCard={ el => this.loginCard = el }
           emailVal={ el => this.emailVal = el }
           passVal={ el => this.passVal = el }
-        />} */}
+        />}
 
-        {/* {login && <Navbar logoutHandler={() => this.logoutHandler()} />} */}
+        {login && <Navbar logoutHandler={() => this.logoutHandler()} />}
 
-        {/* {login && <Dashboard employeeCreator={this.employeeCreator()} />} */}
-        <Navbar logoutHandler={() => this.logoutHandler()} />
-        <Dashboard employeeCreator={this.employeeCreator()} />
+        {login && <Dashboard employeeCreator={this.employeeCreator()} />}
+        {/* <Navbar logoutHandler={() => this.logoutHandler()} />
+        <Dashboard employeeCreator={this.employeeCreator()} /> */}
         <Form
           addFunc={() => this.addFunc()}
           cancelFunc={() => this.cancelFunc()}
