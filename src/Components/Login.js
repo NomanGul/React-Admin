@@ -6,7 +6,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="loginMainDiv" ref={this.props.mainDiv}>
+      <div className="loginMainDiv" ref={this.props.loginCard}>
         <div className="card z-depth-5">
           <div className="card-content blue darken-2 white-text">
             <p className="flow-text center-align">Log In</p>
@@ -18,8 +18,8 @@ class Login extends Component {
                   <div className="row">
                     <div className="input-field col s12">
                       <i className="material-icons prefix">email</i>
-                      <input ref={this.props.emailVal} id="email" type="email" />
-                      <label htmlFor="email">Email</label>
+                      <input ref={this.props.emailVal} id="loginEmail" type="email" />
+                      <label htmlFor="loginEmail">Email</label>
                     </div>
                   </div>
                   <div className="row">
