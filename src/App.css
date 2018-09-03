@@ -17,3 +17,8 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
+
+.placeholder {
+  margin-top: 30vh;
+  color: red;
+}

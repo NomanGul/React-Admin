@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import logo from './logo.svg';
-import '../App.css';
+import "../App.css";
 
 class Login extends Component {
-
   render() {
     return (
       <div className="loginMainDiv" ref={this.props.loginCard}>
@@ -18,18 +17,29 @@ class Login extends Component {
                   <div className="row">
                     <div className="input-field col s12">
                       <i className="material-icons prefix">email</i>
-                      <input ref={this.props.emailVal} id="loginEmail" type="email" />
+                      <input
+                        ref={this.props.emailVal}
+                        id="loginEmail"
+                        type="email"
+                      />
                       <label htmlFor="loginEmail">Email</label>
                     </div>
                   </div>
                   <div className="row">
                     <div className="input-field col s12">
                       <i className="material-icons prefix">lock</i>
-                      <input ref={this.props.passVal} id="password" type="password" />
+                      <input
+                        ref={this.props.passVal}
+                        id="password"
+                        type="password"
+                      />
                       <label htmlFor="password">Password</label>
                     </div>
                   </div>
-                  <button type="submit" className="btn waves-effect waves-light pink right">
+                  <button
+                    type="submit"
+                    className="btn waves-effect waves-light pink right"
+                  >
                     Log In
                     <i className="material-icons right">send</i>
                   </button>

@@ -1,38 +1,58 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
-import '../App.css';
+import React, { Component } from "react";
+import "../App.css";
 
 class Form extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div>
-
-
         {/* <!-- Add Employee Modal Structure --> */}
         <div id="modal1" className="modal modal-fixed-footer">
           <div className="modal-content">
-            <h4 className='center'>New Employee</h4>
+            <h4 className="center">New Employee</h4>
             <div className="row">
               <form className="col s12">
                 <div className="row">
                   <div className="input-field col s6">
-                    <input ref={this.props.firstNameVal} id="first_name" type="text" className="validate" />
+                    <input
+                      ref={this.props.firstNameVal}
+                      id="first_name"
+                      type="text"
+                      className="validate"
+                    />
                     <label htmlFor="first_name">First Name</label>
                   </div>
                   <div className="input-field col s6">
-                    <input ref={this.props.lastNameVal} id="last_name" type="text" className="validate" />
+                    <input
+                      ref={this.props.lastNameVal}
+                      id="last_name"
+                      type="text"
+                      className="validate"
+                    />
                     <label htmlFor="last_name">Last Name</label>
                   </div>
                 </div>
                 <div className="row">
                   <div className="input-field col s12">
-                    <input ref={this.props.formEmailVal} id="email" type="email" className="validate" />
+                    <input
+                      ref={this.props.formEmailVal}
+                      id="email"
+                      type="email"
+                      className="validate"
+                    />
                     <label htmlFor="email">Email</label>
                   </div>
                 </div>
                 <div className="row">
                   <div className="input-field col s12">
-                    <input ref={this.props.salaryVal} id="salary" type="number" className="validate" />
+                    <input
+                      ref={this.props.salaryVal}
+                      id="salary"
+                      type="number"
+                      className="validate"
+                    />
                     <label htmlFor="salary">Salary</label>
                   </div>
                 </div>
@@ -40,8 +60,13 @@ class Form extends Component {
                   <div className="col s12">
                     Job Start Date:
                     <div className="input-field">
-                      <input ref={this.props.jobStartDateVal} id="date" type="date" className="validate" />
-                      <label htmlFor="date"></label>
+                      <input
+                        ref={this.props.jobStartDateVal}
+                        id="date"
+                        type="date"
+                        className="validate"
+                      />
+                      <label htmlFor="date" />
                     </div>
                   </div>
                 </div>
@@ -49,12 +74,22 @@ class Form extends Component {
             </div>
           </div>
           <div className="modal-footer">
-            <button onClick={this.props.addFunc} className="modal-action modal-close waves-effect waves-green btn-flat">Add</button>
-            <button onClick={this.props.cancelFunc} className="modal-action modal-close waves-effect waves-green btn-flat">Cancel</button>
+            <button
+              onClick={this.props.addFunc}
+              className="modal-action modal-close waves-effect waves-green btn-flat"
+            >
+              Add
+            </button>
+            <button
+              onClick={this.props.cancelFunc}
+              className="modal-action modal-close waves-effect waves-green btn-flat"
+            >
+              Cancel
+            </button>
           </div>
         </div>
 
-      {/* <!-- Edit Employee Modal Structure --> */}
+        {/* <!-- Edit Employee Modal Structure --> */}
         {/* <div id="modal2" className="modal modal-fixed-footer">
           <div className="modal-content">
             <h4 className='center'>Edit Employee</h4>
@@ -62,23 +97,23 @@ class Form extends Component {
               <form className="col s12">
                 <div className="row">
                   <div className="input-field col s6">
-                    <input ref={this.props.editFirstNameVal} id="first_name" type="text" className="validate" />
+                    <input ref={this.props.editfirstNameVal} type="text" className="validate" />
                     <label htmlFor="first_name">First Name</label>
                   </div>
                   <div className="input-field col s6">
-                    <input ref={this.props.editlastNameVal} id="last_name" type="text" className="validate" />
+                    <input ref={this.props.editlastNameVal} type="text" className="validate" />
                     <label htmlFor="last_name">Last Name</label>
                   </div>
                 </div>
                 <div className="row">
                   <div className="input-field col s12">
-                    <input ref={this.props.editformEmailVal} id="email" type="email" className="validate" />
+                    <input ref={this.props.editformEmailVal} type="email" className="validate" />
                     <label htmlFor="email">Email</label>
                   </div>
                 </div>
                 <div className="row">
                   <div className="input-field col s12">
-                    <input ref={this.props.editsalaryVal} id="salary" type="number" className="validate" />
+                    <input ref={this.props.editsalaryVal} type="number" className="validate" />
                     <label htmlFor="salary">Salary</label>
                   </div>
                 </div>
@@ -86,7 +121,7 @@ class Form extends Component {
                   <div className="col s12">
                     Job Start Date:
                     <div className="input-field">
-                      <input ref={this.props.editjobStartDateVal} id="date" type="date" className="validate" />
+                      <input ref={this.props.editjobStartDateVal} type="date" className="validate" />
                       <label htmlFor="date"></label>
                     </div>
                   </div>
@@ -95,7 +130,7 @@ class Form extends Component {
             </div>
           </div>
           <div className="modal-footer">
-            <button onClick={this.props.addFunc} className="modal-action modal-close waves-effect waves-green btn-flat">Add</button>
+            <button onClick={this.props.updateFunc} className="modal-action modal-close waves-effect waves-green btn-flat">Update</button>
             <button onClick={this.props.cancelFunc} className="modal-action modal-close waves-effect waves-green btn-flat">Cancel</button>
           </div>
         </div> */}
